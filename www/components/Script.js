@@ -1,17 +1,21 @@
 $(document).on('click', '#calcular', function(){
-  $('#texto').html("<p id='n1'></p>");
-  var num = $('#numero').val();
-  var x = 1, y = 0;
+ var x = 1,
+     num = $('#numero').val();
+     r = 0;
 
-  $('#titulo').html('Tabuada do '+num);
+  $('#titulo').html("Tabuada do "+num);
+  $('#n1').html("");
 
+  if(num == null || num == 0){
+    $('#titulo').html("Valor inválido");
+  } 
   for(x == 1; x <= num; x++){
-    y = num * x;
-    if(x == 1){
-      $('#n1').html(num+' x '+x+' = '+y);
+    r = num * x;
+    if(x==1){
+      $('#n1').html(num+" x "+x+" = "+r);
     }
     else{
-      $('#n1').append('<br>'+num+' x '+x+' = '+y);
+      $('#n1').append("<br>"+num+" x "+x+" = "+r);
     }
   }
 });

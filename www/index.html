@@ -19,35 +19,53 @@
 
 </head>
 <body>
-  <div class="container">
-    <div class="row bg-success text-white fixed-top">
+    <div class="row bg-success text-white" id="topo">
       <div class="col-12 topo" align="center">
         <h1>Tabuada</h1>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="info">
       <div class="col-10 offset-1 corpo">
         <h3 align="center">Número desejado: </h3>
         <input type="number" id="numero" class="form-control">
       </div>
     </div>
-    <div class="row espaco">
+    <div class="row espaco" id="botao">
       <div class="col-10 offset-1">
-        <button class="btn btn-primary col-12" id="calcular">Calcular</button>
+        <button class="btn btn-primary col-12" id="calcular" data-bs-toggle="modal" data-bs-target="#modalTabuada">Calcular</button>
       </div>
     </div>
     <br>
+    <div id="tabuada">
     <div class="row">
       <div class="col-10 offset-1 border-bottom border-success">
-        <h3 align="center" id="titulo">Como funciona?</h3>
+        <h3 align="center">Como funciona?</h3>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="col-10 offset-1" id="texto" align="center">
-        <p id="n1">Informe um número e iremos mostrar a tabuada do número de 1 até chegar a multiplicação por ele mesmo.</p>
+      <div class="col-10 offset-1" align="center">
+        <p>Informe um número e iremos mostrar a tabuada do número de 1 até chegar a multiplicação por ele mesmo.</p>
+      </div>
+    </div>
+
+  <div class="modal fade" id="modalTabuada" tabindex="-1" aria-labelledby="calcular" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="titulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" align="center">
+        <p id="n1"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary col-12" data-bs-dismiss="modal">OK</button>
       </div>
     </div>
   </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
